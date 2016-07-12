@@ -1,0 +1,35 @@
+{
+  "name": "Prokat",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app/index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tonkoshkurik/workflow.git"
+  },
+  "keywords": [
+    "gulp",
+    "scss",
+    "js",
+    "images"
+  ],
+  "author": "Serhii Tokoshkuryk",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tonkoshkurik/workflow/issues"
+  },
+  "homepage": "https://github.com/tonkoshkurik/workflow/",
+  "devDependencies": {
+    "browser-sync": "^2.13.0",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-imagemin": "^3.0.1",
+    "gulp-plumber": "^1.1.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.3.2",
+    "gulp-uglify": "^1.5.4"
+  }
+}
