@@ -1,13 +1,12 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="prokat">
+<html lang="ru" ng-app="prokat">
 <head>
 	<meta charset="UTF-8">
 	<title>Прокат Авто в Феодосии</title>
-	<link rel="stylesheet" href="http://cdn.everything.io/kickstart/3.x/css/kickstart.min.css" />
+<!-- 	<link rel="stylesheet" href="http://cdn.everything.io/kickstart/3.x/css/kickstart.min.css" /> -->
 	<link rel="stylesheet" href="css/style.css">
-	<script src="js/angular.min.js"></script>
 </head>
-<body>
+<body ng-controller="CarListController">
 	<header id="top">
 		<div class="inner">
 			<div class="brand">
@@ -56,7 +55,6 @@
 	</header>
 	<div class="image_section">
 		<h1>Прокат Авто в Феодосии</h1>
-		{{ 1+1 }}
 	</div>
 
 	<div class="mainsection">
@@ -64,199 +62,30 @@
 			<div class="content">
 				<div id="car_masonry">
 					<ul class="portfolio-itemlist-col3 group-itemlist-3 template_ul">
-						<li class="car-lists-item col-33">
+						<li class="car-lists-item col-33"  ng-repeat="car in cars">
 							<div class="car_entry_div">
 								<div class="car_entry_header">
-									<img src="img/smart.jpeg" alt="Mercedes Smart Cabriolet">
+									<img ng-src="{{ car.img }}" alt="{{ car.name }}">
 									<div class="car_entry_content">
-										<h4>Mercedes Smart <br>Cabriolet</h4>
-										<p class="price">от 2500 руб / сутки</p>
-										<div class="car_details">
+										<h4>{{ car.name }}</h4>
+										<p class="price">{{ car.price }}</p>
+										<div class="car_details" ng-show="{{ car.car_details }}">
 											<div class="one_fourth">
 												<strong>Сидений</strong>
-												<em>2</em>
+												<em>{{ car.seats }}</em>
 											</div>
 
 											<div class="one_fourth">
 												<strong>Дверей</strong>
-												<em>3</em>
+												<em>{{ car.dors }}</em>
 											</div>
 
 											<div class="one_half_last">
 												<strong>КП</strong>
-												<em>Автомат</em>
+												<em>{{ car.transmission }}</em>
 											</div>
 											<div class="clear"></div>
 										</div>
-										<!--<p class="more"><a class="button sc_button custom medium">Арендовать</a></p>-->
-									</div>
-								</div>
-							</div>
-						</li>
-						<li class="car-lists-item col-33">
-							<div class="car_entry_div">
-								<div class="car_entry_header">
-									<img src="img/smart2.jpeg" alt="Mercedes Smart">
-									<div class="car_entry_content">
-										<h4>Mercedes Smart</h4>
-										<p class="price">от 2500 руб / сутки</p>
-										<div class="car_details">
-											<div class="one_fourth">
-												<strong>Сидений</strong>
-												<em>2</em>
-											</div>
-
-											<div class="one_fourth">
-												<strong>Дверей</strong>
-												<em>3</em>
-											</div>
-
-											<div class="one_half_last">
-												<strong>КП</strong>
-												<em>Автомат</em>
-											</div>
-											<div class="clear"></div>
-										</div>
-										<!--<p class="more"><a class="button sc_button custom medium">Арендовать</a></p>-->
-									</div>
-								</div>
-							</div>
-						</li>
-						<li class="car-lists-item col-33">
-							<div class="car_entry_div">
-								<div class="car_entry_header">
-									<img src="img/ria.jpeg" alt="">
-									<div class="car_entry_content">
-										<h4>Kia RIO</h4>
-										<p class="price">от 2500 руб / сутки</p>
-										<div class="car_details">
-											<div class="one_fourth">
-												<strong>Сидений</strong>
-												<em>4</em>
-											</div>
-
-											<div class="one_fourth">
-												<strong>Дверей</strong>
-												<em>4</em>
-											</div>
-
-											<div class="one_half_last">
-												<strong>КП</strong>
-												<em>Автомат</em>
-											</div>
-											<div class="clear"></div>
-										</div>
-										<!--<p class="more"><a class="button sc_button custom medium">Арендовать</a></p>-->
-									</div>
-								</div>
-							</div>
-						</li>
-						<li class="car-lists-item col-33">
-							<div class="car_entry_div">
-								<div class="car_entry_header">
-									<img src="img/cabriolet.jpeg" alt="">
-									<div class="car_entry_content">
-										<h4>BMW Cabriolet</h4>
-										<p class="price">от 10 000 руб / сутки</p>
-										<div class="car_details">
-											<div class="one_fourth">
-												<strong>Сидений</strong>
-												<em>2</em>
-											</div>
-
-											<div class="one_fourth">
-												<strong>Дверей</strong>
-												<em>2</em>
-											</div>
-
-											<div class="one_half_last">
-												<strong>КП</strong>
-												<em>Автомат</em>
-											</div>
-											<div class="clear"></div>
-										</div>
-										<!--<p class="more"><a class="button sc_button custom medium">Арендовать</a></p>-->
-									</div>
-								</div>
-							</div>
-						</li>
-						<li class="car-lists-item col-33">
-							<div class="car_entry_div">
-								<div class="car_entry_header">
-									<img src="img/moped.jpg" alt="UAZ">
-									<div class="car_entry_content">
-										<h4>Прокат мопедов <br>Скутеров <br>Мотороллеров</h4>
-										<br>
-										<p class="price">от 1000 руб / сутки</p>
-										
-										<!--<p class="more"><a class="button sc_button custom medium">Арендовать</a></p>-->
-									</div>
-								</div>
-							</div>
-						</li>
-						<li class="car-lists-item col-33">
-							<div class="car_entry_div">
-								<div class="car_entry_header">
-									<img src="img/car6.jpg" alt="">
-									<div class="car_entry_content">
-										<h4>Toyota Hiace</h4>
-										<p class="price">от 6000 руб / сутки</p>
-										<div class="car_details">
-											<div class="one_fourth">
-												<strong>Сидений</strong>
-												<em>8</em>
-											</div>
-
-											<div class="one_fourth">
-												<strong>Дверей</strong>
-												<em>4</em>
-											</div>
-
-											<div class="one_half_last">
-												<strong>КП</strong>
-												<em>Автомат</em>
-											</div>
-											<div class="clear"></div>
-										</div>
-										<!--<p class="more"><a class="button sc_button custom medium">Арендовать</a></p>-->
-									</div>
-								</div>
-							</div>
-						</li>
-						<li class="car-lists-item col-33">
-							<div class="car_entry_div">
-								<div class="car_entry_header">
-									<img src="img/yacht.jpg" alt="">
-									<div class="car_entry_content">
-										<h4>Яхта</h4>
-										<br>
-										<p class="price">Цену уточняйте у менеджера</p><br>
-										<!--<p class="more"><a class="button sc_button custom medium">Арендовать</a></p>-->
-									</div>
-								</div>
-							</div>
-						</li>
-						<li class="car-lists-item col-33">
-							<div class="car_entry_div">
-								<div class="car_entry_header">
-									<img src="img/limuzin.jpeg" alt="">
-									<div class="car_entry_content">
-										<h4>Лимузин</h4>
-										<br>
-										<p class="price">Цену уточняйте у менеджера</p><br>
-										<!--<p class="more"><a class="button sc_button custom medium">Арендовать</a></p>-->
-									</div>
-								</div>
-							</div>
-						</li>
-						<li class="car-lists-item col-33">
-							<div class="car_entry_div">
-								<div class="car_entry_header">
-									<img src="img/cater.jpg" alt="">
-									<div class="car_entry_content">
-										<h4>Катер</h4>
-										<br>
-										<p class="price">Цену уточняйте у менеджера</p><br>
 										<!--<p class="more"><a class="button sc_button custom medium">Арендовать</a></p>-->
 									</div>
 								</div>
@@ -264,7 +93,7 @@
 						</li>
 					</ul>
 				</div>
-				
+				<div class="clearfix"></div>
 				<div class="text-content">
 					<div id="necessary">
 						<h2 class="text-center">Условия</h2>
@@ -306,7 +135,7 @@
 	</div>
 	
 	<h2 class="text-center" id="contacts">Контакты</h2>
-	<div id="map" style="width: 100%; height: 400px"></div>
+	<div id="map" style="width: 100%; height: 400px;"></div>
 
 	<aside class="modal">
   <header>
@@ -332,6 +161,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-W2QKSX');</script>
 <!-- End Google Tag Manager -->
+	<script src="js/angular.min.js"></script>
 	<script src="js/scripts.js"></script>
 </body>
 </html>

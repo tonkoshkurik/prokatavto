@@ -42,4 +42,86 @@ setupAsync({"key":undefined,"apikey":undefined,"browser":{"name":"Firefox","vers
         );
         myMap.geoObjects.add(myPlacemark);
     }
-angular.module('prokat', []);
+var prokatApp = angular.module('prokat', []);
+prokatApp.controller('CarListController', function CarListController($scope){
+	$scope.cars = [
+	{
+		img: 'img/smart.jpeg',
+		name: 'Mercedes Smart Cabriolet',
+		price: 'от 2500 руб / сутки',
+		car_details: true,
+		seats: '2',
+		dors: '3',
+		transmission: 'Автомат',
+		other_options: ''
+	},
+	{
+		img: 'img/smart2.jpeg',
+		name: 'Mercedes Smart',
+		price: 'от 2500 руб / сутки',
+		car_details: true,
+		seats: '2',
+		dors: '3',
+		transmission: 'Автомат',
+		other_options: ''
+	},
+	{
+		img: 'img/ria.jpeg',
+		name: 'Kia RIO',
+		price: 'от 2500 руб / сутки',
+		car_details: true,
+		seats: '4',
+		dors: '4',
+		transmission: 'Автомат',
+		other_options: ''
+	},
+	{
+		img: 'img/cabriolet.jpeg',
+		name: 'BMW Cabriolet',
+		price: 'от 2500 руб / сутки',
+		car_details: true,
+		seats: '2',
+		dors: '2',
+		transmission: 'Автомат',
+		other_options: ''
+	},
+	{
+		img: 'img/moped.jpg',
+		name: 'Прокат мопедов, скутеров, мотороллеров',
+		price: 'от 1000 руб / сутки',
+		car_details: false,
+		seats: '',
+		dors: '',
+		transmission: '',
+		other_options: ''
+	},
+	{
+		img: 'img/car6.jpg',
+		name: 'Toyota Hiace',
+		price: 'от 6000 руб / сутки',
+		car_details: true,
+		seats: '8',
+		dors: '4',
+		transmission: 'Автомат',
+		other_options: ''
+	},
+	{
+		img: 'img/yacht.jpg',
+		name: 'Яхта',
+		car_details: false,
+		price: 'Цену уточняйте у менеджера'
+	},
+	{
+		img: 'img/limuzin.jpeg',
+		name: 'Лимузин',
+		car_details: false,
+		price: 'Цену уточняйте у менеджера'
+	},
+	{
+		img: 'img/cater.jpg',
+		name: 'Катер',
+		car_details: false,
+		price: 'Цену уточняйте у менеджера'
+	}
+	];
+});
