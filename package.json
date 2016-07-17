@@ -1,5 +1,5 @@
 {
-  "name": "Prokat",
+  "name": "prokatavto",
   "version": "1.0.0",
   "description": "",
   "main": "app/index.html",
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/tonkoshkurik/workflow.git"
+    "url": "https://github.com/tonkoshkurik/prokatavto"
   },
   "keywords": [
     "gulp",
@@ -19,7 +19,7 @@
   "author": "Serhii Tokoshkuryk",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/tonkoshkurik/workflow/issues"
+    "url": "https://github.com/tonkoshkurik/prokatavto/issues"
   },
   "homepage": "https://github.com/tonkoshkurik/workflow/",
   "devDependencies": {
