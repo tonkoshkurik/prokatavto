@@ -1,11 +1,11 @@
 doctype html
-html(lang='ru', ng-app='prokat')
+html(lang='ru')
   head
     meta(charset='UTF-8')
     title Прокат Авто в Феодосии
     // <link rel="stylesheet" href="http://cdn.everything.io/kickstart/3.x/css/kickstart.min.css" />
     link(rel='stylesheet', href='css/style.css')
-  body.ng-scope(ng-controller='CarListController')
+  body
     header#top
       .inner
         .brand
@@ -57,8 +57,7 @@ html(lang='ru', ng-app='prokat')
         .content
           #car_masonry
             ul.portfolio-itemlist-col3.group-itemlist-3.template_ul
-              // ngRepeat: car in cars
-              li.car-lists-item.col-33.ng-scope(ng-repeat='car in cars')
+              li.car-lists-item.col-33.ng-scope
                 .car_entry_div
                   .car_entry_header
                     img(ng-src='img/smart.jpeg', alt='Mercedes Smart Cabriolet', src='img/smart.jpeg')
@@ -77,8 +76,7 @@ html(lang='ru', ng-app='prokat')
                           em.ng-binding Автомат
                         .clear
                       // <p class="more"><a class="button sc_button custom medium">Арендовать</a></p>
-              // end ngRepeat: car in cars
-              li.car-lists-item.col-33.ng-scope(ng-repeat='car in cars')
+              li.car-lists-item.col-33.ng-scope
                 .car_entry_div
                   .car_entry_header
                     img(ng-src='img/smart2.jpeg', alt='Mercedes Smart', src='img/smart2.jpeg')
@@ -97,8 +95,7 @@ html(lang='ru', ng-app='prokat')
                           em.ng-binding Автомат
                         .clear
                       // <p class="more"><a class="button sc_button custom medium">Арендовать</a></p>
-              // end ngRepeat: car in cars
-              li.car-lists-item.col-33.ng-scope(ng-repeat='car in cars')
+              li.car-lists-item.col-33.ng-scope
                 .car_entry_div
                   .car_entry_header
                     img(ng-src='img/ria.jpeg', alt='Kia RIO', src='img/ria.jpeg')
@@ -117,8 +114,7 @@ html(lang='ru', ng-app='prokat')
                           em.ng-binding Автомат
                         .clear
                       // <p class="more"><a class="button sc_button custom medium">Арендовать</a></p>
-              // end ngRepeat: car in cars
-              li.car-lists-item.col-33.ng-scope(ng-repeat='car in cars')
+              li.car-lists-item.col-33.ng-scope
                 .car_entry_div
                   .car_entry_header
                     img(ng-src='img/cabriolet.jpeg', alt='BMW Cabriolet', src='img/cabriolet.jpeg')
@@ -137,8 +133,7 @@ html(lang='ru', ng-app='prokat')
                           em.ng-binding Автомат
                         .clear
                       // <p class="more"><a class="button sc_button custom medium">Арендовать</a></p>
-              // end ngRepeat: car in cars
-              li.car-lists-item.col-33.ng-scope(ng-repeat='car in cars')
+              li.car-lists-item.col-33.ng-scope
                 .car_entry_div
                   .car_entry_header
                     img(ng-src='img/moped.jpg', alt='Прокат мопедов, скутеров, мотороллеров', src='img/moped.jpg')
@@ -157,8 +152,7 @@ html(lang='ru', ng-app='prokat')
                           em.ng-binding
                         .clear
                       // <p class="more"><a class="button sc_button custom medium">Арендовать</a></p>
-              // end ngRepeat: car in cars
-              li.car-lists-item.col-33.ng-scope(ng-repeat='car in cars')
+              li.car-lists-item.col-33.ng-scope
                 .car_entry_div
                   .car_entry_header
                     img(ng-src='img/car6.jpg', alt='Toyota Hiace', src='img/car6.jpg')
@@ -176,9 +170,8 @@ html(lang='ru', ng-app='prokat')
                           strong КП
                           em.ng-binding Автомат
                         .clear
-                      // <p class="more"><a class="button sc_button custom medium">Арендовать</a></p>
-              // end ngRepeat: car in cars
-              li.car-lists-item.col-33.ng-scope(ng-repeat='car in cars')
+                      // <p clss="more"><a class="button sc_button custom medium">Арендовать</a></p>
+              li.car-lists-item.col-33.ng-scope
                 .car_entry_div
                   .car_entry_header
                     img(ng-src='img/yacht.jpg', alt='Яхта', src='img/yacht.jpg')
@@ -197,8 +190,7 @@ html(lang='ru', ng-app='prokat')
                           em.ng-binding
                         .clear
                       // <p class="more"><a class="button sc_button custom medium">Арендовать</a></p>
-              // end ngRepeat: car in cars
-              li.car-lists-item.col-33.ng-scope(ng-repeat='car in cars')
+              li.car-lists-item.col-33.ng-scope
                 .car_entry_div
                   .car_entry_header
                     img(ng-src='img/limuzin.jpeg', alt='Лимузин', src='img/limuzin.jpeg')
@@ -217,8 +209,7 @@ html(lang='ru', ng-app='prokat')
                           em.ng-binding
                         .clear
                       // <p class="more"><a class="button sc_button custom medium">Арендовать</a></p>
-              // end ngRepeat: car in cars
-              li.car-lists-item.col-33.ng-scope(ng-repeat='car in cars')
+              li.car-lists-item.col-33.ng-scope
                 .car_entry_div
                   .car_entry_header
                     img(ng-src='img/cater.jpg', alt='Катер', src='img/cater.jpg')
@@ -237,7 +228,6 @@ html(lang='ru', ng-app='prokat')
                           em.ng-binding
                         .clear
                       // <p class="more"><a class="button sc_button custom medium">Арендовать</a></p>
-              // end ngRepeat: car in cars
           .clearfix
           .text-content
             #necessary
